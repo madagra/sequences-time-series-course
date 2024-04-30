@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "time-series-course"
+description = ''
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["pytorch", "machine-learning"]
+authors = [
+  { name = "Mario Dagrada", email = "mariodagrada24@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "torch",
+  "matplotlib",
+  "pandas",
+  "ipykernel",
+  "notebook",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["time_series_course"]
+
+[tool.hatch.envs.default.scripts]
+ts-notebook = "python -m ipykernel install --user --name time_series && jupyter notebook"
