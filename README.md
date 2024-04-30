@@ -1,4 +1,4 @@
-# Sequences, Time Series and Prediction course material
+# Sequences, Time Series and Prediction course material with PyTorch
 
 Implementation of all the code for the [Sequences, Time Series and Prediction](https://www.coursera.org/learn/tensorflow-sequences-time-series-and-prediction) course written in PyTorch. 
 
