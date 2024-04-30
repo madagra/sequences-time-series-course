@@ -2,32 +2,11 @@ from typing import Optional
 
 import torch
 import torch.nn as nn
-from torch.nn import Module
-from torch.optim import Optimizer
-from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import LRScheduler
 
 from time_series_course.preprocessing import (
     windowed_dataloader,
 )
-
-
-def _update_epoch(
-    model: Module,
-    optimizer: Optimizer,
-    data: DataLoader,
-    batch_size: int,
-    n_minibatch: Optional[int],
-    shuffle: bool,
-) -> float:
-
-    # batch gradient descent
-    if n_minibatch is None:
-        pass
-    # minibatch gradient descent
-    # select 1 to perform a fully stochastic gradient descent
-    else:
-        pass
 
 
 def train_nn(
